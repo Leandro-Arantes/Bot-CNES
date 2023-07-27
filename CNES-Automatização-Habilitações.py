@@ -100,15 +100,15 @@ except: navegador.get('http://cnes2.datasus.gov.br/Manutencao.htm')
 finally: navegador.get(habilitacao)
 
 #Identificador dos campos login HABILITAÇÕES
-usuario = navegador.find_element(By.XPATH, '/html/body/table/tbody/tr/td/table[2]/tbody/tr/td/form/table/tbody/tr[2]/td[2]/input')
-senha = navegador.find_element(By.XPATH, '/html/body/table/tbody/tr/td/table[2]/tbody/tr/td/form/table/tbody/tr[3]/td[2]/input')
-cpf = navegador.find_element(By.XPATH, '/html/body/table/tbody/tr/td/table[2]/tbody/tr/td/form/table/tbody/tr[4]/td[2]/input')
+usuario_port = navegador.find_element(By.XPATH, '/html/body/table/tbody/tr/td/table[2]/tbody/tr/td/form/table/tbody/tr[2]/td[2]/input')
+senha_port = navegador.find_element(By.XPATH, '/html/body/table/tbody/tr/td/table[2]/tbody/tr/td/form/table/tbody/tr[3]/td[2]/input')
+cpf_port = navegador.find_element(By.XPATH, '/html/body/table/tbody/tr/td/table[2]/tbody/tr/td/form/table/tbody/tr[4]/td[2]/input')
 
 
 #Preenchimento de login
-usuario.send_keys(f'{login}')
-senha.send_keys(f'{senha}')
-cpf.send_keys(f'{cpf}')
+usuario_port.send_keys(f'{login}')
+senha_port.send_keys(f'{senha}')
+cpf_port.send_keys(f'{cpf}')
 time.sleep(2)
 navegador.find_element(By.XPATH, '/html/body/table/tbody/tr/td/table[2]/tbody/tr/td/form/table/tbody/tr[5]/td/input').click()
 
